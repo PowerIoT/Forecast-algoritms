@@ -1,5 +1,14 @@
 # Forecast-algoritms
 Machine learning, Deep Learning and Statistical Models
+
+## DISCLAIMER
+Time series verilerinde, seriyi olabildiğince ergodik hale getirebilmemiz gerekiyor. Neural Network'te vs 18-30% bandında RMSE almamızın sebebi, network, t+1 anına, t verisinin değerini basıyor. Çünkü x(t+1) ile x(t) arasındaki korelasyon çok yüksek. Hangi forecast algoritmasını kullanırsak kullanalım, seriye önce bir preprocessing uygulamamız lazım. Bunlar:
+ - Seriden mevsimsel etkilerin kaldırılması,
+ - Autocorrelation'ı düzeltmek için serinin ( x(t) ) logunun alınması ( 1 + log x(t) )
+ - Seriyi n tane periyodik ergodik komponente ayırmak
+ 
+gibi şeyler olabilir. Time-series verileri sıkıntılı veriler. Üzerinde biraz düşünmemiz gerekiyor. Şeyda hoca bize bu konuda yardımcı olabilir. (Egemen)
+
 ## Statistical Models
 * ARIMA, ARMAX
   * Bulutun olmadığı günlerde günlerde sorunsuz çalışıyor. Time-serieslerde oldukça yaygın kullanılan bir model. Bir iki döküman ekliyorum. Benim (Nail), en zayıf olduğum konu bu. Mendeleye de yayın ekleyeceğim.
